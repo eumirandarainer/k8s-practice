@@ -1,4 +1,4 @@
-# Sample pod
+# Criei esse manifest para utilizar uma imagem inexistente de maneira proposital
 apiVersion: v1
 kind: Pod
 metadata:
@@ -10,7 +10,7 @@ metadata:
 spec:
   containers:
   - name: broken-app 
-    image: eumirandarainer/my-inexistent-image # Propositalmente, essa imagem nao existe
+    image: eumirandarainer/my-inexistent-image
 
 # Para observar os eventos do Pod:
 # kubectl events --for pod/broken-pod

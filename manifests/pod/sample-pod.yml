@@ -12,4 +12,7 @@ spec:
   - name: sample-app
     image: eumirandarainer/sample-app
     ports:
-    - containerPort: 8888 # Talvez precise usar o port-forward
+    - containerPort: 8888
+
+
+# Habilitar o port-foward para conseguir fazer requisicoes locais

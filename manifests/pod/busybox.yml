@@ -1,3 +1,4 @@
+# Usar esse manifest para interagir com o shell do busybox
 apiVersion: v1
 kind: Pod
 metadata:
