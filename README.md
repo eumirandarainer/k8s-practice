@@ -1,2 +1,5 @@
-# k8s-practice
-K8s practice related files
+# K8s PRACTICE FILES
+
+# Sample-app
+
+eumirandarainer/sample-app
