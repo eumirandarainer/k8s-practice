@@ -1,1 +1,15 @@
 # Sample pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-app-pod
+  labels:
+    app: sample-app
+    environment: staging
+    author: eumirandarainer
+spec:
+  containers:
+  - name: sample-app
+    image: eumirandarainer/sample-app
+    ports:
+    - containerPort: 8888 # Talvez precise usar o port-forward
