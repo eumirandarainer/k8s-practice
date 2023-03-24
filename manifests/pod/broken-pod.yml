@@ -1,0 +1,16 @@
+# Sample pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-pod
+  labels:
+    app: broken-image
+    environment: staging
+    author: eumirandarainer
+spec:
+  containers:
+  - name: broken-app 
+    image: eumirandarainer/my-inexistent-image # Propositalmente, essa imagem nao existe
+
+# Para observar os eventos do Pod:
+# kubectl events --for pod/broken-pod
