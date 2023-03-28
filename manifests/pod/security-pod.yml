@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: security-pod
+  labels:
+    app: demo-hello-security
+    environment: staging
+spec:
+  containers:
+  - name: demo
+    image: cloudnatived/demo:hello
+    securityContext:
+      runAsUser: 1551
+      readOnlyRootFilesystem: true
+#     allowPrivilegeEscalation: false
+#     capabilities:
+#       drop: ["NET_RAW"]
+#       add: ["NET_ADMIN"]
