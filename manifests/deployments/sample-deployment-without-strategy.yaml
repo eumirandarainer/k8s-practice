@@ -1,0 +1,24 @@
+# Sample deployment WITHOUT rolling strategy
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    deployment: sample-app
+    author: eumirandarainer
+  name: sample-app-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: sample-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      containers:
+      - image: eumirandarainer/sample-app
+        name: sample-app-ctr
+        ports:
+        - containerPort: 8888
