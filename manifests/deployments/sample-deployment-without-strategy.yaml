@@ -3,8 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    deployment: sample-app
-    author: eumirandarainer
+    strategy: none
   name: sample-app-deploy
 spec:
   replicas: 4
