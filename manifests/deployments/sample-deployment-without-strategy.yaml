@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    strategy: none
+    strategy: "no"
   name: sample-app-deploy
 spec:
   replicas: 4
