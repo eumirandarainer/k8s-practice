@@ -1,24 +1,27 @@
-# Sample deployment WITHOUT rolling strategy
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    deployment: sample-app
-    author: eumirandarainer
   name: sample-app-deploy
 spec:
-  replicas: 4
+  replicas: 5
   selector:
     matchLabels:
       app: sample-app
-  strategy: {}
+  revisionHistoryLimit: 3
+  progressDeadlineSeconds: 300
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:
         app: sample-app
     spec:
       containers:
-      - image: eumirandarainer/sample-app
-        name: sample-app-ctr
+      - name: sample-app-ctr
+        image: eumirandarainer/sample-app
         ports:
         - containerPort: 8888
