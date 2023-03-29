@@ -2,15 +2,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample-app-pod
+  name: simple-go-app-pod
   labels:
-    app: sample-app
+    app: simple-go-app
     environment: staging
     author: eumirandarainer
 spec:
   containers:
-  - name: sample-app
-    image: eumirandarainer/sample-app
+  - name: simple-go-app-ctr
+    image: eumirandarainer/simple-go-app
     ports:
     - containerPort: 8888
 

@@ -5,20 +5,20 @@ metadata:
   labels:
     author: eumirandarainer
     strategy: "no"
-  name: sample-app-deploy
+  name: simple-go-app-deploy
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: sample-app
+      app: simple-go-app
   strategy: {}
   template:
     metadata:
       labels:
-        app: sample-app
+        app: simple-go-app
     spec:
       containers:
-      - image: eumirandarainer/sample-app
-        name: sample-app-ctr
+      - image: eumirandarainer/simple-go-app
+        name: simple-go-app-ctr
         ports:
         - containerPort: 8888
