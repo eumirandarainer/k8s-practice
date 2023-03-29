@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: sample-app-deploy
   labels:
+    author: eumirandarainer
     strategy: "yes"
 spec:
   replicas: 5

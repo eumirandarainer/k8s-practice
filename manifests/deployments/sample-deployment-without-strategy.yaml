@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
+    author: eumirandarainer
     strategy: "no"
   name: sample-app-deploy
 spec:
