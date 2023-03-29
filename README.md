@@ -1,5 +1,3 @@
 # K8s PRACTICE FILES
 
-# Sample-app
-
-eumirandarainer/sample-app
+Files for K8s practice
