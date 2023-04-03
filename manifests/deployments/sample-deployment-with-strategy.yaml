@@ -6,11 +6,11 @@ metadata:
     author: eumirandarainer
     strategy: "yes"
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: simple-go-app
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 5
   progressDeadlineSeconds: 300
   minReadySeconds: 10
   strategy:
@@ -25,6 +25,6 @@ spec:
     spec:
       containers:
       - name: simple-go-app-ctr
-        image: eumirandarainer/simple-go-app
+        image: eumirandarainer/simple-go-app:v1
         ports:
         - containerPort: 8888
